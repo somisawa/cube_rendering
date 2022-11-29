@@ -5,7 +5,7 @@
 
 int width = 160, height = 44;
 char buffer[160 * 44];
-float zBuffer[160 * 44];
+float zBuffer[160 * 44 * 4];
 float focalX = 20.;
 float focalY = 10.;
 float cubeWidth = 40.;
@@ -68,7 +68,7 @@ int main() {
             for (float cubeY = -cubeWidth; cubeY < cubeWidth;
                  cubeY += stepsize) {
                 calculateForSurface(cubeX, cubeY, -cubeWidth, '@');
-                calculateForSurface(-cubeX, cubeY, cubeWidth, '#');
+                calculateForSurface(-cubeX, cubeY, cubeWidth, '.');
                 calculateForSurface(cubeWidth, cubeY, cubeX, '$');
                 calculateForSurface(-cubeWidth, cubeY, -cubeX, '+');
                 calculateForSurface(cubeX, cubeWidth, cubeY, '~');
